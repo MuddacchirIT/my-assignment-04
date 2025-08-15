@@ -22,45 +22,42 @@
 // -----------------------------------------------------------
 // Problem 02 here
 
- function onlyCharacter(str){ 
-    if(typeof str != "string"|| Array.isArray ==="str"||typeof str.includes === Boolean){
-        return "Invalid"
-     }
+//  function onlyCharacter(str){ 
+//     if(typeof str != "string"|| Array.isArray ==="str"||typeof str.includes === Boolean){
+//         return "Invalid"
+//      }
 
-    else{let upperStr = str.toUpperCase();
-        let noSpaceStr = upperStr.split(" ").join("");
-        return noSpaceStr;
-     }  
- }
+//     else{let upperStr = str.toUpperCase();
+//         let noSpaceStr = upperStr.split(" ").join("");
+//         return noSpaceStr;
+//      }  
+//  }
  
-const result = onlyCharacter("    h  e  llo   wor  ld");
-console.log(result);
+// const result = onlyCharacter("    h  e  llo   wor  ld");
+// console.log(result);
 
 // -----------------------------------------------------------
 // Problem 03 here
 
-// let team1 = {  name  : "Germany",  foul  : 10,  cardY  : 1,  cardR  : 1 };
-// let team2 = {  name  : "France",  foul  : 10,  cardY  : 2,  cardR  : 1 };
+// let team1 = {name:"Brazil",foul:5,cardY:1,cardR:0};
+// let team2 = {name:"Argentina",foul:7,cardY:0,cardR:0};
 
 //  function bestTeam(player1, player2){
 //     if(Array.isArray(player1)||Array.isArray(player2)|| typeof player1 ===   "string" || typeof player2 === "string"){
 //         return "Invalid"
 //     }
 //     let players1Sum = 0;
-//     let players2Sum = 0;
-
 //     for(let key in player1){
 //         if(typeof player1[key] === "number"){
 //             players1Sum += player1[key]
 //         }
 //     }
-
+//     let players2Sum = 0;
 //       for(let key in player2){
 //         if(typeof player2[key] === "number"){
 //             players2Sum += player2[key]
 //         }
 //     }
-
 //     if(players1Sum < players2Sum){
 //         return `${player1.name}`
 
@@ -75,28 +72,35 @@ console.log(result);
 //  const result = bestTeam(team1, team2);
 //  console.log(result);
  
-
-
 // -----------------------------------------------------------
 // Problem 04 here
  
-// let a = [2, null, 6];
-// let b = [2, undefined, 6]; 
+let a = [1, 2, 3];
+let b = [1, 2, 3];
+ function isSame(arr1,arr2){ 
+    if(Array.isArray(arr1) !== true || Array.isArray(arr2) !== true){
+       return "Invalid";
+    } 
+   else if(Array.isArray(arr1) || Array.isArray(arr2) || typeof arr1.includes === "number" || typeof arr2.includes === "number"){
+      for(let i = 0; i <= arr2.length - arr1.length; i++){
+         let same = true;
+         for (let k = 0; k < arr1.length; k++){
+            if(arr1[k] !== arr2[i+k]){
+               same = false;
+               break;
+            }
+         }
+         if (same) return true;
+      }
+      return false;
+   }
+   else{
+      return false;
+   }
+ }
 
-//  function isSame(arr1,arr2){ 
-//     if(!Array.isArray(arr1) && !Array.isArray(arr2)){
-//        return "Invalid";
-//     }
-//     else if(Array.isArray(arr1) && Array.isArray(arr2) && typeof arr1.includes === "number" && typeof arr2.includes === "number"){
-//         return "true"
-//     }
-//     else{
-//     return "false"; 
-//     }
-// }
- 
-//  const result = isSame(a, b);
-//  console.log(result);
+ const result = isSame(a, b);
+ console.log(result);
  
 
 
