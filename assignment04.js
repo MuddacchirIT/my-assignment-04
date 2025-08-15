@@ -75,76 +75,74 @@
 // -----------------------------------------------------------
 // Problem 04 here
  
-let a = [1, 2, 3];
-let b = [1, 2, 3];
- function isSame(arr1,arr2){ 
-    if(Array.isArray(arr1) !== true || Array.isArray(arr2) !== true){
-       return "Invalid";
-    } 
-   else if(Array.isArray(arr1) || Array.isArray(arr2) || typeof arr1.includes === "number" || typeof arr2.includes === "number"){
-      for(let i = 0; i <= arr2.length - arr1.length; i++){
-         let same = true;
-         for (let k = 0; k < arr1.length; k++){
-            if(arr1[k] !== arr2[i+k]){
-               same = false;
-               break;
-            }
-         }
-         if (same) return true;
-      }
-      return false;
-   }
-   else{
-      return false;
-   }
- }
+// let a = [1, 2, 3];
+// let b = [1, 2, 3];
 
- const result = isSame(a, b);
- console.log(result);
+//  function isSame(arr1,arr2){ 
+//     if(Array.isArray(arr1) !== true || Array.isArray(arr2) !== true){
+//        return "Invalid";
+//     } 
+//    else if(Array.isArray(arr1) || Array.isArray(arr2) || typeof arr1.includes === "number" || typeof arr2.includes === "number"){
+//       for(let i = 0; i <= arr2.length - arr1.length; i++){
+//          let same = true;
+//          for (let k = 0; k < arr1.length; k++){
+//             if(arr1[k] !== arr2[i+k]){
+//                same = false;
+//                break;
+//             }
+//          }
+//          if (same) return true;
+//       }
+//       return false;
+//    }
+//    else{
+//       return false;
+//    }
+//  }
+
+//  const result = isSame(a, b);
+//  console.log(result);
  
-
-
 // -----------------------------------------------------------
 // Problem 05 here
  
-// const input = [99];
+const input = [];
 
-// function resultReport(marks)
-//  { 
-//         if(Array.isArray(marks) === false){
-//             return "Invalid"
-//         }
-//         if(marks.length === 0){
-//         return {finalScore: 0, pass: 0, fail: 0};
-//         }
+function resultReport(marks){ 
+   if(Array.isArray(marks) === false){
+       return "Invalid"
+   }
+      if(marks.length === 0){
+      return {finalScore: 0, pass: 0, fail: 0};
+   }
     
-//     let sum = 0;
-//     for(const mark of marks){
-//         sum = sum + mark;
-//         }
-//         const count = marks.length;
-//         const avg = sum / count;
-//         const score = avg.toFixed(2);
-//         const finalScore = parseFloat(score);
+   let sum = 0;
+    for(const mark of marks){
+      sum = sum + mark;
+   }
+      const count = marks.length;
+      const avg = sum / count;
+      const score = avg.toFixed(2);
+      const finalScore = parseFloat(score);
     
-//     let pass = 0;
-//     for (let i = 0; i < marks.length; i++) {
-//     if (marks[i] >= 40) {
-//       pass++;
-//         }
-//     }
+   let pass = 0;
+    for (let i = 0; i < marks.length; i++) {
+         if (marks[i] >= 40) {
+            pass++;
+        }
+    }
   
-//     let fail = 0;
-//     for (let i = 0; i < marks.length; i++) {
-//     if (marks[i] <= 40) {
-//     fail++;
-//         }
-//     }
-//     return {finalScore, pass, fail};
-// }
+    let fail = 0;
+    for (let i = 0; i < marks.length; i++) {
+         if (marks[i] <= 40) {
+            fail++;
+        }
+    }
+    return {finalScore, pass, fail};
+}
       
-// const result = resultReport(input);
-// console.log(result);
+const result = resultReport(input);
+console.log(result);
 
 
-// ------------------------------END-----------------------------
+               //------END------
