@@ -6,37 +6,35 @@
 // Assignment 04 started here
 // Problem 01 here
 
- function totalFine(fare){
-     if(fare <= 0 || typeof fare != "number"){
-        return "Invalid"} 
+//  function totalFine(fare){
+//      if(fare <= 0 || typeof fare != "number"){
+//         return "Invalid"} 
 
-    let surcharge = 0.2;
-    let extraServiceCharge = 30;
-    let fine = fare + (fare * surcharge) + extraServiceCharge;
-    return fine;
-    }
+//     let surcharge = 0.2;
+//     let extraServiceCharge = 30;
+//     let fine = fare + (fare * surcharge) + extraServiceCharge;
+//     return fine;
+//     }
 
-const result = totalFine(200);
-console.log(result);
+// const result = totalFine(200);
+// console.log(result);
 
 // -----------------------------------------------------------
 // Problem 02 here
 
-//  function onlyCharacter(str){ 
-//      if(typeof str != "number"){
-//         let upperStr = str.toUpperCase();
-//         let noSpaceStr = upperStr.split(" ").join("");
-//         return noSpaceStr;
-//      }
-//      else{
-//         Array.isArray == true && str.includes === true;
-//         return "Invalid"
-//      }
-//  }
+ function onlyCharacter(str){ 
+    if(typeof str != "string"|| Array.isArray ==="str"||typeof str.includes === Boolean){
+        return "Invalid"
+     }
 
-// const result = onlyCharacter("Serv er:: Do wn");
-// console.log(result);
-
+    else{let upperStr = str.toUpperCase();
+        let noSpaceStr = upperStr.split(" ").join("");
+        return noSpaceStr;
+     }  
+ }
+ 
+const result = onlyCharacter("    h  e  llo   wor  ld");
+console.log(result);
 
 // -----------------------------------------------------------
 // Problem 03 here
